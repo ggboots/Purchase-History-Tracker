@@ -1,14 +1,18 @@
-function login(){
-    return <h1>login</h1>
+import styles from "../styles/Login.module.css";
+
+export default function login() {
+  return (
+    <div>
+      <h1 className={styles.title}>login</h1>
+      <div>
+        <label>Username</label>
+        <input type="text" id="username"></input>
+      </div>
+      <div>
+        <label>Password</label>
+        <input type="text" id="password"></input>
+      </div>
+      <button>Login</button>
+    </div>
+  );
 }
-
-export default login
-
-// https://nextjs.org/docs/routing/introduction
-
-// https://www.smashingmagazine.com/2021/06/client-side-routing-next-js/
-
-// Dynamic Routes
-// https://nextjs.org/docs/routing/dynamic-routes
-// https://www.youtube.com/watch?v=WPdJaBFquNc&t=59s
-// https://www.youtube.com/watch?v=ERUHYh_65F4

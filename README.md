@@ -1,18 +1,14 @@
 ## Stock Purchase Tracker App
 
 ```bash
-npm run dev
-# or
-yarn dev
+mui.com after finishing
 ```
 
-// Mongoose, - layered abstraction ontop of mongoDB
- https://mongoosejs.com/
+1 - Mongodb for saving stock choices
+2 - Twelvedata API for stock information
+3 - Google Charts to display information
 
-// Express - layered abstraction ontop of node
-creates a htto server applications, something that runs on a machine somewhere that responds to requests
-https://expressjs.com/
 
-// Axios - layered abstraction ontop of node and browser
-axios is a http client, makes requests, it is promise-based which can run on browser and nodejs
-https://axios-http.com/docs/intro
+login no user -> just show chart of default stock, purchase bar says "empty"
+
+login user -> presets are on, and reads browsers cache to show previous session
