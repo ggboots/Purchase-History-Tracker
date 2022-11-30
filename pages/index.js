@@ -15,7 +15,7 @@ export default function Dashboard() {
         <h1 className={styles.title}>
             <a>Stock Purchase App</a>
             {/* <div>Login</div> */}
-            <a href="http://google.com"id={styles.login}>Icon</a>
+            <a href="/login"id={styles.login}>Icon</a>
         </h1>
 
     <div className={styles.container}>
