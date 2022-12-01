@@ -1,6 +1,8 @@
+// this is the format passed into the mongod
+
 import { Schema, model, models } from "mongoose";
 
-const testSchema = new Schema({
+const userDetails = new Schema({
     username: String,
     password: {
         type: String,

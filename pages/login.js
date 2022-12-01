@@ -10,9 +10,11 @@ export default function login() {
       </div>
       <div>
         <label>Password</label>
-        <input type="text" id="password"></input>
+        <input type="text" id="password" placeholder="password"></input>
       </div>
-      <button>Login</button>
+      <div>
+        <button type="submit">Login</button>
+      </div>
     </div>
   );
 }

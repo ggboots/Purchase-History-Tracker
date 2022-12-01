@@ -1,4 +1,7 @@
+import { Chart } from "react-google-charts";
+
 import Head from "next/head";
+import Link from 'next/link';
 // import Image from 'next/image'
 import styles from "../styles/Dashboard.module.css";
 
@@ -17,9 +20,8 @@ export default function Dashboard() {
       <h1 className={styles.title}>
         <a>Stock Purchase App</a>
         {/* <div>Login</div> */}
-        <a href="/login" id={styles.login}>
-          Icon
-        </a>
+        <Link href="login" id={styles.login}>login</Link>
+        {/* <a href="/login" id={styles.login}>Icon</a> */}
       </h1>
 
       <div className={styles.container}>
@@ -35,11 +37,26 @@ export default function Dashboard() {
 
           <div id={styles.chart} className={styles.gridChart}>
             <h2 className={styles.cardChart}>Chart</h2>
+            <div>
+              <Chart
+                chartType="ScatterChart"
+                data={[
+                  ["StockPrice", "$TSLA"],
+                  [30, 42],
+                  [360, 360],
+                ]}
+                width="100%"
+                height="500px"
+                legendToggle
+              />
+            </div>
           </div>
 
           <div id={styles.purchases} className={styles.card}>
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+            <h2>Purchase History</h2>
+            <div>Buy</div>
+            <div>Buy</div>
+            <div>Buy</div>
           </div>
 
           <div id={styles.chartController} className={styles.card}>
