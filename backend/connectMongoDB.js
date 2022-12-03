@@ -1,21 +1,42 @@
-// One of the major differences between require() and import() is that 
-// require() can be called from anywhere inside the program 
-// whereas import() cannot be called conditionally, it always runs at the beginning of the file.
+require("dotenv").config();
+const express = require("express");
+const app = express();
+const mongoose = require("mongoose");
+const cors = require('cors');
 
-const mongoose = require('mongoose');
-// import mongoose from "mongoose";
+// Middleware, runs before the final route call is made
+app.use(cors());
+app.use(express.json());
 
-// const connectDatabase = async () => {
-//     mongoose.connect(mongo_URI)
+mongoose.connect(mongoURL, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    }).then(() => {
+        console.log("Connected to Mongodb");
+    }).catch((e) => {
+        console.log(e)
+    });
 
-// };
 
-mongoose.connect('mongodb://localhost/demoDB');
+// const newUser = new createNewUser({ name: "George", password: "password" });
+// newUser.save().then(() => console.log("Saved"));
 
-mongoose.connection.once('open', function(){
-    console.log("connected")
-}).on('error', () => {
-    console.log('connection failed')
+require("./loginSchema");
+
+const createNewUser = mongoose.model('weblogin');
+app.post('/login', async (req,res) => {
+    const {username, password} = req.body;
+    try {
+        await createNewUser.create({
+            username,
+            password,
+        })
+        res.send({status: "ok"})
+    } catch (e) {
+        res.send({status:"error"})
+    }
 })
 
-// export default connectDatabase
+app.listen(9000, () => {
+    console.log("Server Start")
+})
