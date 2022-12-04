@@ -1,6 +1,13 @@
 import React, {Component} from 'react';
-// import { Component } from 'react';
+import axios from 'axios';
+import Link from 'next/link';
 import styles from "../styles/Login.module.css";
+
+// import clientPromise from '../testServer';
+
+// const api = axios.create({
+//   baseURL: ""
+// })
 
 export default class login extends Component {
   constructor(props) {
@@ -8,35 +15,22 @@ export default class login extends Component {
     this.state = {
       username: "",
       password: "",
+      
     }
-    this.handleSubmit = this.handleSubmit.bind(this);
+
+
   }
 
-  handleSubmit(e){
-    e.preventDefault();
-    const {username, password } = this.state;
-    console.log(username, password)
+  handleLoginSubmit(){
 
-    fetch("http://localhost:9000/login",{
-      method: "POST",
-      crossDomain: true,
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "Access-Control-Allow-Origin": "*",},
-      body: JSON.stringify({
-        username,
-        password,}),
-    })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data, "userRegister");
-    }) 
   }
   render(){
     return (
-      <form onSubmit={this.handleSubmit}>
-
+       
+      <form action="api/loginAPI" method="post">
+      <div>
+        <Link href="../">Return Home</Link>
+      </div>
       <h1 className={styles.title}>login</h1>
       <div>
         <label>Username</label>
@@ -49,7 +43,9 @@ export default class login extends Component {
       <div>
         <button type="submit" >Login</button>
       </div>
-
+      <div>
+        <Link href="register" id={styles.login}>Register new user</Link>
+      </div>
     </form>
   );
 }

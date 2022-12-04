@@ -2,6 +2,7 @@
 # Project-based 
 .env
 .env.local
+demoStock.json
 
 # dependencies
 /node_modules

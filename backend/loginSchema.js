@@ -1,35 +1,26 @@
-// this is the format passed into the mongod
 // Schema - tells db structure of data
-const mongoose = require("mongoose");
-
-// import { Schema, model, models } from "mongoose";
-
-// const userDetails = new Schema({
-//     username: String,
-//     password: {
-//         type: String,
-//         required: true,
-//         unique: true,
-//     },
-// });
-
-// const Test = models.test || model('test', testSchema)
-
-// export default Test;
+// const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const loginSchema = new mongoose.Schema(
   {
-    username: String,
-    password: String,
-    // password: {
-    //     type: String,
-    //     required: true,
-    //     unique: true,
-    // }
+    username: {
+      type: String,
+      required: true,
+      unqiue: true,
+    },
+    password: {
+        type: String,
+        required: true,
+        unique: true,
+    }
   },
-  { 
-    collection: "weblogin",
-}
+  {
+    collection: "Users"
+  }
+
 );
 
-mongoose.model("weblogin", loginSchema);
+// checks for already made database
+// OR create new database if not present
+module.exports = mongoose.models.loginSchema || mongoose.model("loginSchema", loginSchema);

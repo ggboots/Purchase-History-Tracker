@@ -1,3 +1,4 @@
+// .env will not work with nodemon, find work around
 require("dotenv").config();
 const express = require("express");
 const app = express();
@@ -7,6 +8,7 @@ const cors = require('cors');
 // Middleware, runs before the final route call is made
 app.use(cors());
 app.use(express.json());
+
 
 mongoose.connect(mongoURL, {
         useNewUrlParser: true,
@@ -18,12 +20,10 @@ mongoose.connect(mongoURL, {
     });
 
 
-// const newUser = new createNewUser({ name: "George", password: "password" });
-// newUser.save().then(() => console.log("Saved"));
 
 require("./loginSchema");
 
-const createNewUser = mongoose.model('weblogin');
+const createNewUser = mongoose.model('loginSchema');
 app.post('/login', async (req,res) => {
     const {username, password} = req.body;
     try {

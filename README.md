@@ -15,6 +15,8 @@ https://mongoosejs.com/docs
 https://www.youtube.com/watch?v=iW39Merz0zE 
 https://www.youtube.com/watch?v=egnRORUThx0 
 
+alternative (AlphaVenture)
+
 ### Google Charts
 - https://blog.logrocket.com/use-google-charts-react/
 - https://developers.google.com/chart/interactive/docs/basic_load_libs
