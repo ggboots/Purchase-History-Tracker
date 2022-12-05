@@ -7,7 +7,7 @@ export default async function handler(req,res){
     try {
         const user = await loginSchema.create(req.body);
         res.redirect('../')
-        if(!username){
+        if(!user){
             return res.json({code:'User not found'})
         }
     } catch(error){

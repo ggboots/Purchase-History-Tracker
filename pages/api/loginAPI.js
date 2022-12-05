@@ -6,7 +6,8 @@ connectMongo();
 export default async function handler(req,res){
     const {username, password} = req.body
     const login = await loginSchema.findOne({username,password})
-    if(!username){
+    if(!login){
+        console.log('incorrect password')
         return res.json({status: "not valid"})
     }
     else{

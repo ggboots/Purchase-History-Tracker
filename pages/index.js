@@ -1,11 +1,21 @@
 import { Chart } from "react-google-charts";
+import React, {useState, useEffect} from "react";
+import axios from "axios";
 
 import Head from "next/head";
 import Link from 'next/link';
 // import Image from 'next/image'
+
 import styles from "../styles/Dashboard.module.css";
 
+
+// const request = require("request")
+
 export default function Dashboard() {
+
+  async function retrieveData(){
+
+  }
   return (
     <div>
       <Head>
