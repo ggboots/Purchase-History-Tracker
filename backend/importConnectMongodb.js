@@ -10,11 +10,9 @@ async function connectMongo(){
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
+    console.log(process.env.MONGO_URI)
 
     connection.isConnected = db.connections[0].readyState;
-    console.log(process.env.MONGO_URI)
-    // does understand .env
-
 }
 
 export default connectMongo;

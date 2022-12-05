@@ -2,6 +2,7 @@ import { Chart } from "react-google-charts";
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 
+
 import Head from "next/head";
 import Link from 'next/link';
 // import Image from 'next/image'
@@ -9,13 +10,22 @@ import Link from 'next/link';
 import styles from "../styles/Dashboard.module.css";
 
 
-// const request = require("request")
+
 
 export default function Dashboard() {
-
-  async function retrieveData(){
-
+  
+  function RetrieveData(){
+    console.log(process.env.TWELVEDATA_API_KEY)
+      axios.get(`https://api.twelvedata.com/time_series?symbol=AAPL,USD/EUR,IXIC&interval=1min&apikey=${process.env.TWELVEDATA_API_KEY}`)
+        .then(res => {
+          console.log(res)
+        })
+        .catch(error => {
+          console.log(error)
+        })
+  
   }
+
   return (
     <div>
       <Head>
@@ -63,10 +73,11 @@ export default function Dashboard() {
           </div>
 
           <div id={styles.purchases} className={styles.card}>
-            <h2>Purchase History</h2>
+            <h2 >Purchase History</h2>
             <div>Buy</div>
             <div>Buy</div>
             <div>Buy</div>
+            <button onClick={RetrieveData}></button>
           </div>
 
           <div id={styles.chartController} className={styles.card}>
