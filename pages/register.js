@@ -10,29 +10,6 @@ export default class Register extends Component {
       username: "",
       password: "",
     }
-    this.handleSubmit = this.handleSubmit.bind(this)
-  }
-
-  handleSubmit(e){
-    e.preventDefault();
-    const {username, password } = this.state;
-    console.log(username, password)
-
-    fetch("http://localhost:9000/login",{
-      method: "POST",
-      crossDomain: true,
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "Access-Control-Allow-Origin": "*",},
-      body: JSON.stringify({
-        username,
-        password,}),
-    })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data, "userRegister");
-    }) 
   }
   render(){
     return (
@@ -41,11 +18,11 @@ export default class Register extends Component {
       <h1 className={styles.title}>Register User</h1>
       <div>
         <label>Username</label>
-        <input type="text" id="username" onChange={(e) => this.setState({username: e.target.value})}></input>
+        <input type="username" name="username" id="username" onChange={(e) => this.setState({username: e.target.value})}></input>
       </div>
       <div>
         <label>Password</label>
-        <input type="text" id="password" placeholder="password" onChange={(e) => this.setState({password: e.target.value})}></input>
+        <input type="password" name="password" id="password" placeholder="password" onChange={(e) => this.setState({password: e.target.value})}></input>
       </div>
       <div>
         <button type="submit" >Login</button>

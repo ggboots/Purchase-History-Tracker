@@ -15,9 +15,6 @@ const loginSchema = new mongoose.Schema(
         unique: true,
     }
   },
-  {
-    collection: "Users"
-  }
 
 );
 
