@@ -1,0 +1,15 @@
+Login/Register
+1. When data saves save username and object id into state for ui
+
+stock Purchases
+1. requires objectID to create stockPurchaseSchema, if no objectID return to home s
+and return error explaining issue
+2. using objectID as linked list, username aswell, send data to database
+3. on home page, based on which Ticker is, display datsa in column high/low
+
+
+database scrapper/ delete 
+1. rename table to TODELETE_StockPurchases, (to disconnect)
+1. using objectID, forEach objectID, loop through purchaseStock, if map() is true
+send to new database
+3. after search, drop previous table and new table named StockPurchases connect to app

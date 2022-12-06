@@ -9,13 +9,10 @@ import Link from 'next/link';
 
 import styles from "../styles/Dashboard.module.css";
 
-
-
-
+const loginTitle = "login";
 export default function Dashboard() {
   
   function RetrieveData(){
-    console.log(process.env.TWELVEDATA_API_KEY)
       axios.get(`https://api.twelvedata.com/time_series?symbol=AAPL,USD/EUR,IXIC&interval=1min&apikey=${process.env.TWELVEDATA_API_KEY}`)
         .then(res => {
           console.log(res)
@@ -24,6 +21,10 @@ export default function Dashboard() {
           console.log(error)
         })
   
+  }
+
+  const fetchData = async() => {
+    const response = await fetch()
   }
 
   return (
@@ -40,7 +41,7 @@ export default function Dashboard() {
       <h1 className={styles.title}>
         <a>Stock Purchase App</a>
         {/* <div>Login</div> */}
-        <Link href="login" id={styles.login}>login</Link>
+        <Link href="login" id={styles.login}>{loginTitle}</Link>
         {/* <a href="/login" id={styles.login}>Icon</a> */}
       </h1>
 
@@ -73,6 +74,7 @@ export default function Dashboard() {
           </div>
 
           <div id={styles.purchases} className={styles.card}>
+          <Link href="addNewPurchase" id={styles.login}>Add new purchase</Link>
             <h2 >Purchase History</h2>
             <div>Buy</div>
             <div>Buy</div>

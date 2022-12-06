@@ -18,6 +18,6 @@ const loginSchema = new mongoose.Schema(
 
 );
 
-// checks for already made database
-// OR create new database if not present
+// checks for already made database (login)
+// OR create new database if not present (Register)
 module.exports = mongoose.models.loginSchema || mongoose.model("loginSchema", loginSchema);

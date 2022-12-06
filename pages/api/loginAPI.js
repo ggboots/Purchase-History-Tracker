@@ -11,11 +11,11 @@ export default async function handler(req,res){
         return res.json({status: "not valid"})
     }
     else{
-        res.redirect('../')
-    }
-    // try {
-    //     const user = await loginSchema.create(req.body);
-    // } catch(error){
+        res.status(200).json(login.username)
+        res.status(200).json(login._id)
 
-    // }
+        //parse data into index.js state
+
+        // res.redirect('../')
+    }
 }
