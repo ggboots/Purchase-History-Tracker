@@ -1,0 +1,17 @@
+/ index
+- Homepage
+
+/ login
+- Login forum
+- similar design to register
+
+/ register
+- register forum 
+
+/ stock purchase
+
+
+Components
+/ Banner
+
+use components for each part of Homepage UI

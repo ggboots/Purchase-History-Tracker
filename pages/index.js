@@ -1,31 +1,17 @@
 import { Chart } from "react-google-charts";
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-
 import Head from "next/head";
-import Link from 'next/link';
+import Link from "next/link";
 // import Image from 'next/image'
 
 import styles from "../styles/Dashboard.module.css";
 
-const loginTitle = "login";
 export default function Dashboard() {
-  
-  function RetrieveData(){
-      axios.get(`https://api.twelvedata.com/time_series?symbol=AAPL,USD/EUR,IXIC&interval=1min&apikey=${process.env.TWELVEDATA_API_KEY}`)
-        .then(res => {
-          console.log(res)
-        })
-        .catch(error => {
-          console.log(error)
-        })
-  
-  }
 
-  const fetchData = async() => {
-    const response = await fetch()
-  }
+  // on default, useState will set as login, when components render only
+  const [loginTitle, setLoginTitle] = useState("login");
 
   return (
     <div>
@@ -40,9 +26,9 @@ export default function Dashboard() {
 
       <h1 className={styles.title}>
         <a>Stock Purchase App</a>
-        {/* <div>Login</div> */}
-        <Link href="login" id={styles.login}>{loginTitle}</Link>
-        {/* <a href="/login" id={styles.login}>Icon</a> */}
+        <Link href="login" passHref id={styles.login}>
+          {loginTitle}
+        </Link>
       </h1>
 
       <div className={styles.container}>
@@ -53,7 +39,6 @@ export default function Dashboard() {
 
           <div id={styles.stockChange} className={styles.card}>
             <h2>Stock Change &rarr;</h2>
-            {/* <Image src="" alt="Vercel Logo" width={0} height={0} /> */}
           </div>
 
           <div id={styles.chart} className={styles.gridChart}>
@@ -74,12 +59,14 @@ export default function Dashboard() {
           </div>
 
           <div id={styles.purchases} className={styles.card}>
-          <Link href="addNewPurchase" id={styles.login}>Add new purchase</Link>
-            <h2 >Purchase History</h2>
+            <Link href="addNewPurchase" id={styles.login}>
+              Add new purchase
+            </Link>
+            <h2>Purchase History</h2>
             <div>Buy</div>
             <div>Buy</div>
             <div>Buy</div>
-            <button onClick={RetrieveData}></button>
+            <button></button>
           </div>
 
           <div id={styles.chartController} className={styles.card}>
