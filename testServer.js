@@ -10,3 +10,7 @@
   //       console.log(error);
   //     });
   // }
+
+
+// const fs = require('fs/promises')
+// fs.writeFile('writeFile.txt', 'make file');

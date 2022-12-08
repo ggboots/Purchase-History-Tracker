@@ -20,4 +20,8 @@ const loginSchema = new mongoose.Schema(
 
 // checks for already made database (login)
 // OR create new database if not present (Register)
-module.exports = mongoose.models.loginSchema || mongoose.model("loginSchema", loginSchema);
+module.exports = mongoose.models.loginSchema || mongoose.model('loginSchema', loginSchema) 
+
+// Data in API folder are treated as API endpoints not, they are server side only
+
+// this should not be a React Component

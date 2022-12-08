@@ -1,14 +1,19 @@
 import React, {Component} from 'react';
+import connectMongo from '../backend/importConnectMongodb';
+import loginSchema from '../backend/loginSchema';
+import mongoose from 'mongoose';
+
 import Link from 'next/link';
 
 import styles from "../styles/Login.module.css";
 
-export default function Login(props){
-    // const [username, setUsername] = React.useState('');
-    // const [password, setPassword] = React.useState('');
+connectMongo();
+
+function Login (props){
+
     return (
-        <form action="api/loginAPI" method="post">
-        {/* <form> */}
+      <form action="api/loginAPI" method="get">
+      {/* <form> */}
       <div>
         <Link href="../">Return Home</Link>
       </div>
@@ -22,17 +27,35 @@ export default function Login(props){
         <input name="password" id="password"></input>
       </div>
       <div>
-        <button type="submit">Login</button>
+        <button type="submit" onClick={getRequest}>Login</button>
       </div>
       <div>
         <Link href="register" id={styles.login}>Register new user</Link>
       </div>
     </form>
   );
+  
 
-  // Login.getInitialProps = async (ctx) => {
-  //   const res = await fetch('')
-  // }
+  async function getRequest(res,req){
+    const {username, password} = req.body
+    const login = await loginSchema.findOne({username,password})
+    if(!login){
+      return res.json({status: "incorrect password"})
+    }
+    else{
+      console.log(username + password)
+      // const obj = {name: 'me'}
+      // jsonfile.writeFile('../../fromDatabase.json', obj)
+      // .then(res => {
+        //     console.log('write complete')
+        // })
+        // .catch(error => console.log(error))
+        // res.status(200).json(login)
+        
+      }
+      
+    }
 }
-
-
+  
+  
+export default Login
