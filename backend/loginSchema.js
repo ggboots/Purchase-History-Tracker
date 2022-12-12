@@ -1,5 +1,3 @@
-// Schema - tells db structure of data
-// const mongoose = require("mongoose");
 import mongoose from "mongoose";
 
 const loginSchema = new mongoose.Schema(
@@ -18,10 +16,5 @@ const loginSchema = new mongoose.Schema(
 
 );
 
-// checks for already made database (login)
-// OR create new database if not present (Register)
+// checks for existing database (login) OR create new database (Register)
 module.exports = mongoose.models.loginSchema || mongoose.model('loginSchema', loginSchema) 
-
-// Data in API folder are treated as API endpoints not, they are server side only
-
-// this should not be a React Component

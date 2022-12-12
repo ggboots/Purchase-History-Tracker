@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Link from 'next/link';
 
+import data from "../backend/fromDatabase.json"
+
 export default class login extends Component {
   constructor(props) {
     super(props);
@@ -39,6 +41,8 @@ export default class login extends Component {
       <div>
         <button type="submit" >Submit</button>
       </div>
+      <label name="username">{data.username}</label>
+      <label name="_id">{data._id}</label>
     </form>
   );
 }

@@ -1,17 +1,20 @@
 import { Chart } from "react-google-charts";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import data from "../backend/fromDatabase"
 
 import Head from "next/head";
 import Link from "next/link";
 
+import AddNewPurchaseLoggedIn from './components/AddNewPurchaseLoggedIn'
+
 import styles from "../styles/Dashboard.module.css";
 
-export default function Dashboard() {
 
+export default function Dashboard() {
   // on default, useState will set as login, when components render only
   const [loginTitle, setLoginTitle] = useState("login");
-
+  console.log(data._id)
   return (
     <div>
       <Head>
@@ -26,7 +29,7 @@ export default function Dashboard() {
       <h1 className={styles.title}>
         <a>Stock Purchase App</a>
         <Link href="login" passHref id={styles.login}>
-          {loginTitle}
+          {data.username}
         </Link>
       </h1>
 
@@ -56,8 +59,10 @@ export default function Dashboard() {
               />
             </div>
           </div>
+{/* conditional rendering */}
 
-          <div id={styles.purchases} className={styles.card}>
+          <AddNewPurchaseLoggedIn isLoggedIn={true}/>
+          {/* <div id={styles.purchases} className={styles.card}>
             <Link href="addNewPurchase" id={styles.login}>
               Add new purchase
             </Link>
@@ -66,7 +71,7 @@ export default function Dashboard() {
             <div>Buy</div>
             <div>Buy</div>
             <button></button>
-          </div>
+          </div> */}
 
           <div id={styles.chartController} className={styles.card}>
             <h2>Controller</h2>

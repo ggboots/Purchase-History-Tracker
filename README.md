@@ -1,8 +1,9 @@
 ## Stock Purchase Tracker App
 
 ```bash
-mui.com after finishing
+mui.com (Material UI) after finishing
 ```
+
 
 1 - Mongodb for saving stock choices
 2 - Twelvedata API for stock information

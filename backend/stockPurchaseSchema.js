@@ -18,9 +18,15 @@ const stockPurchaseSchema = new mongoose.Schema(
     dateOfPurchases: {
         type: String,
         required: true,
+    },
+    username: {
+      type: String,
+    },
+    _id: {
+      type: String,
     }
   },
 
 );
 
-module.exports = mongoose.models.stockPurchaseSchema || mongoose.model("stockPurchaseSchema", stockPurchaseSchema);
+module.exports = mongoose.models.stockPurchaseSchema || mongoose.model("stockPurchaseSchemas", stockPurchaseSchema);
