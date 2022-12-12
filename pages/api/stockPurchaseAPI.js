@@ -1,7 +1,8 @@
-import connectPurchaseMongoDB from "../../backend/importConnectPurchaseMongodb";
+// import connectPurchaseMongoDB from "../../backend/importConnectPurchaseMongodb";
+import connectMongo from "../../backend/importConnectMongodb";
 import stockPurchaseSchema from "../../backend/stockPurchaseSchema";
 
-connectPurchaseMongoDB();
+connectMongo();
 
 export default async function handler(req,res){
     try {

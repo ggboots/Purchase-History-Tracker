@@ -22,5 +22,4 @@ export default async function handler(req,res){
     }
 }
 
-
 //https://heynode.com/tutorial/readwrite-json-files-nodejs/

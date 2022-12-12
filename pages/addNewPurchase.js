@@ -6,12 +6,6 @@ import data from "../backend/fromDatabase.json"
 export default class login extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      ticker: "",
-      quantity: "",
-      amountAtPurchase: "",
-      dateOfPurchases: "",
-    }
   }
 
   render(){
@@ -24,19 +18,19 @@ export default class login extends Component {
       <h1>Add New Stock Purchase</h1>
       <div>
         <label >Ticker Symbol</label>
-        <input name="ticker" id="ticker" onChange={(e) => this.setState({username: e.target.value})}></input>
+        <input name="ticker" id="ticker" ></input>
       </div>
       <div>
         <label>quantity</label>
-        <input name="quantity" id="quantity" onChange={(e) => this.setState({password: e.target.value})}></input>
+        <input name="quantity" id="quantity"></input>
       </div>
       <div>
         <label>cost at time of purhcase</label>
-        <input name="amountAtPurchases" id="amountAtPurchases" onChange={(e) => this.setState({password: e.target.value})}></input>
+        <input name="amountAtPurchases" id="amountAtPurchases" ></input>
       </div>
       <div>
         <label>Date of Purchase</label>
-        <input name="dateOfPurchases" id="dateOfPurchases" onChange={(e) => this.setState({password: e.target.value})}></input>
+        <input name="dateOfPurchases" id="dateOfPurchases" ></input>
       </div>
       <div>
         <button type="submit" >Submit</button>
