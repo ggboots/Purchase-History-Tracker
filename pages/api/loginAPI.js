@@ -1,6 +1,7 @@
 import connectMongo from "../../backend/importConnectMongodb";
 import loginSchema from "../../backend/loginSchema";
-import fs from 'fs/promises'
+// import fs from 'fs/promises'
+// fs module not working, jsonfile works
 const jsonfile = require('jsonfile')
 
 connectMongo();
@@ -16,7 +17,7 @@ export default async function handler(req,res){
         .then(res => {
             console.log('write complete')
         })
-        .catch(error => console.log(error))
+        .catch(error => console.log("login issues"))
         res.redirect('../')
 
     }

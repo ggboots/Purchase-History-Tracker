@@ -12,5 +12,6 @@ export default async function handler(req,res){
         }
     } catch(error){
         res.status(400).json({status:'error found when'})
+        res.redirect('../');
     }
 }

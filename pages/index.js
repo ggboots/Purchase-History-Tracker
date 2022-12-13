@@ -62,16 +62,6 @@ export default function Dashboard() {
 {/* conditional rendering */}
 
           <AddNewPurchaseLoggedIn isLoggedIn={true}/>
-          {/* <div id={styles.purchases} className={styles.card}>
-            <Link href="addNewPurchase" id={styles.login}>
-              Add new purchase
-            </Link>
-            <h2>Purchase History</h2>
-            <div>Buy</div>
-            <div>Buy</div>
-            <div>Buy</div>
-            <button></button>
-          </div> */}
 
           <div id={styles.chartController} className={styles.card}>
             <h2>Controller</h2>

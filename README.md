@@ -4,6 +4,8 @@
 mui.com (Material UI) after finishing
 ```
 
+how NextJS works
+https://www.youtube.com/watch?v=d2yNsZd5PMs
 
 1 - Mongodb for saving stock choices
 2 - Twelvedata API for stock information

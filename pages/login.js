@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 import styles from "../styles/Login.module.css";
 
-
-function Login (props){
+// form uses value of name parameter to create object
+function Login (){
 
     return (
       <form action="api/loginAPI" method="post">
