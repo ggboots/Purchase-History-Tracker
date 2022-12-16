@@ -5,7 +5,6 @@ const stockPurchaseSchema = new mongoose.Schema(
     ticker: {
       type: String,
       required: true,
-      unique: true,
     },
     quantity: {
         type: Number,
