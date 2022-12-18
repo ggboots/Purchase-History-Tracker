@@ -15,6 +15,12 @@ export default function Dashboard() {
   // on default, useState will set as login, when components render only
   const [loginTitle, setLoginTitle] = useState("login");
   console.log(data._id)
+
+  function fullScreenMode(){
+    //let container = 
+    styles.main.color = "red"
+  }
+
   return (
     <div>
       <Head>
@@ -34,7 +40,7 @@ export default function Dashboard() {
       </h1>
 
       <div className={styles.container}>
-        <main className={styles.main}>
+        <main id={styles.main}>
           <div id={styles.banner} className={styles.grid}>
             <h2 className={styles.card}>Banner stock information</h2>
           </div>
@@ -45,6 +51,7 @@ export default function Dashboard() {
 
           <div id={styles.chart} className={styles.gridChart}>
             <h2 className={styles.cardChart}>Chart</h2>
+            <button onClick={fullScreenMode}>Click for Fullscreen</button>
             <div>
               <Chart
                 chartType="ScatterChart"

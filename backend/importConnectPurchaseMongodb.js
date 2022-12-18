@@ -20,7 +20,7 @@ async function connectPurchaseMongoDB(){
     connection.isConnected = db.connections[0].readyState;
 }
 
-export default connectPurchaseMongoDB;
+export default connectPurchaseMongoDB
 
 
 // https://medium.com/@abhi11210646/multiple-mongodb-database-connections-in-nodejs-ee4b75cc70e3
