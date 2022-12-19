@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Link from 'next/link';
-import styles from "../styles/Register.module.css";
+import styles from "../styles/Register.module.scss";
 
 export default class Register extends Component {
   constructor(props) {

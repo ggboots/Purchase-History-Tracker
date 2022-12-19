@@ -8,18 +8,25 @@ import Link from "next/link";
 
 import AddNewPurchaseLoggedIn from './components/AddNewPurchaseLoggedIn'
 
-import styles from "../styles/Dashboard.module.css";
+import styles from "../styles/Dashboard.module.scss";
 
 
 export default function Dashboard() {
   // on default, useState will set as login, when components render only
   const [loginTitle, setLoginTitle] = useState("login");
-  console.log(data._id)
+  let loginUsername = data.username || 'login'
+    // take data from json OR if empty set as 
 
-  function fullScreenMode(){
-    //let container = 
-    styles.main.color = "red"
-  }
+    function fullScreenMode(){
+      // css module
+    }
+
+    async function GetStaticProps(){
+      const res = await fetch('http://localhost:300/api/stockPurchaseAPI')
+      const data = res.json
+
+      return data
+    }
 
   return (
     <div>
@@ -34,8 +41,8 @@ export default function Dashboard() {
 
       <h1 className={styles.title}>
         <a>Stock Purchase App</a>
-        <Link href="login" passHref id={styles.login}>
-          {data.username}
+        <Link href="login" passHref id={styles.login} >
+          {loginUsername}
         </Link>
       </h1>
 

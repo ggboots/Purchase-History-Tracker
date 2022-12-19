@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link'
-import styles from "../../styles/Dashboard.module.css";
+import styles from "../../styles/Dashboard.module.scss";
 
 export default function AddNewPurchaseLoggedIn(props){
     if(props.isLoggedIn){

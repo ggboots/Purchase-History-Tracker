@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 
 import Link from 'next/link';
 
-import styles from "../styles/Login.module.css";
+import styles from "../styles/Login.module.scss";
 
 // form uses value of name parameter to create object
 function Login (){
