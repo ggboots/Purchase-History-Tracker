@@ -12,4 +12,4 @@ const atestSchema = new mongoose.Schema(
     },
 );
 
-module.exports = mongoose.models.atestSchema || mongoose.model('atest', atestSchema) 
+module.exports = mongoose.models.atestSchema || mongoose.model('loginSchema', atestSchema) 

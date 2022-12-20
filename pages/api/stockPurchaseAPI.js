@@ -2,15 +2,14 @@ import connectPurchaseMongoDB from "../../backend/importConnectPurchaseMongodb";
 import stockPurchaseSchema from "../../backend/stockPurchaseSchema";
 
 connectPurchaseMongoDB();
+// change to CreateConnection
 
 export default async function handler(req,res){
     try {
-        const user = await stockPurchaseSchema.create(req.body);
+        const newEntry = await stockPurchaseSchema.create(req.body);
+        console.log(newEntry);
         res.redirect('../')
-        if(!user){
-            return res.json({code:'User not found'})
-        }
     } catch(error){
-        res.status(400).json({status:'error found when'})
+        res.status(400).json({status:error})
     }
 }

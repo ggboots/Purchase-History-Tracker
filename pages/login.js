@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import mongoose from 'mongoose';
 
 import Link from 'next/link';
 

@@ -9,7 +9,7 @@ https://www.youtube.com/watch?v=d2yNsZd5PMs
 
 1 - Mongodb for saving stock choices
 2 - Twelvedata API for stock information
-3 - Google Charts to display information
+3 - Google Charts to display information/ Chart.js 
 
 ### Mongo db
 https://mongoosejs.com/docs

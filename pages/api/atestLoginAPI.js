@@ -1,5 +1,6 @@
 // import mongoose from "mongoose";
 import connectMONGODB from "../../atestDB/aimportDatabase";
+import loginSchema from "../../backend/loginSchema";
 
 connectMONGODB();
 
@@ -13,10 +14,11 @@ export default async function handler(req,res){
         return res.json({status: "incorrect password"})
     }
     else{
-        jsonfile.writeFile('./backend/fromDatabase.json', login)
-        res.setHeader('Set-Cookie',username)
-        console.log("User logged in")
-        res.redirect('../')
+        // jsonfile.writeFile('./backend/fromDatabase.json', login)
+        return res.json({status: "success"})
+        // res.setHeader('Set-Cookie',username)
+        // console.log("User logged in")
+        // res.redirect('../')
 
     }
 }

@@ -1,6 +1,5 @@
 import { Chart } from "react-google-charts";
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import data from "../backend/fromDatabase"
 
 import Head from "next/head";
