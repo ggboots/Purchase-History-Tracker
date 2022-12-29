@@ -1,8 +1,8 @@
-import connectMongo from "../../backend/importConnectMongodb";
+import connectMongoDB from "../../backend/connectMongoDB";
 import loginSchema from "../../backend/loginSchema";
 const jsonfile = require('jsonfile')
 
-connectMongo();
+connectMongoDB();
 
 export default async function handler(req,res){
     const {username, password} = req.body
@@ -16,6 +16,7 @@ export default async function handler(req,res){
     else{
         jsonfile.writeFile('./backend/fromDatabase.json', login)
         res.setHeader('Set-Cookie',username)
+        // window.localStorage.setItem(login)
         console.log("User logged in")
         res.redirect('../')
 

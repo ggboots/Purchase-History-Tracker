@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+// import jsonfile from 'jsonfile'
 
 import Link from 'next/link';
 
@@ -7,7 +8,14 @@ import styles from "../styles/Login.module.scss";
 // form uses value of name parameter to create object
 function Login (){
 
+
+  // function signOut(){
+  //   jsonfile.writeFile('./backend/fromDatabase.json', '{}')
+
+  // }
+
     return (
+      <div>
       <form action="api/loginAPI" method="post">
       {/* <form> */}
       <div>
@@ -28,7 +36,9 @@ function Login (){
       <div>
         <Link href="register" id={styles.login}>Register new user</Link>
       </div>
-    </form>
+      </form>
+      <button onClick="api/hello.js">Sign Out existing</button>
+      </div>
   );
 
 }

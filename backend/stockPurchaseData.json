@@ -1,0 +1,14 @@
+[
+    {
+        "ticker":"TSLA",
+        "quantity": "360",
+        "costAtPurchase": "12000",
+        "dateOfPurchases": "20-02-2020"
+    },
+    {
+        "ticker":"TSLA",
+        "quantity": "360",
+        "costAtPurchase": "12000",
+        "dateOfPurchases": "01-04-2020"
+    }
+]

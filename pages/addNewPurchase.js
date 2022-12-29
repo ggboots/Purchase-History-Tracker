@@ -37,7 +37,9 @@ export default class login extends Component {
       </div>
       <label name="username">{data.username}</label>
       <label name="_id">{data._id}</label>
+      <button action="api/purchaseHistoryAPI" method="post">History</button>
     </form>
+
   );
 }
 }

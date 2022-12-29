@@ -5,7 +5,8 @@ import data from "../backend/fromDatabase"
 import Head from "next/head";
 import Link from "next/link";
 
-import AddNewPurchaseLoggedIn from './components/AddNewPurchaseLoggedIn'
+import AddNewPurchaseLoggedIn from '../components/AddNewPurchaseLoggedIn'
+import StockChart from "../components/StockChart";
 
 import styles from "../styles/Dashboard.module.scss";
 
@@ -21,11 +22,21 @@ export default function Dashboard() {
     }
 
     async function GetStaticProps(){
-      const res = await fetch('http://localhost:300/api/stockPurchaseAPI')
-      const data = res.json
-
-      return data
+      const res = await fetch('http://localhost:300/api/')
+      console.log(res.json)
     }
+
+    const getPurchaseHistory = async () => {
+        try {
+          const res = await fetch(
+            `/pages/api/hello.js`
+          );
+          console.log(res);
+        } catch (err) {
+          console.log(err);
+        }
+      }
+    
 
   return (
     <div>
@@ -54,10 +65,10 @@ export default function Dashboard() {
           <div id={styles.stockChange} className={styles.card}>
             <h2>Stock Change &rarr;</h2>
           </div>
-
-          <div id={styles.chart} className={styles.gridChart}>
+          <StockChart />
+          {/* <div id={styles.chart} className={styles.gridChart}>
             <h2 className={styles.cardChart}>Chart</h2>
-            <button onClick={fullScreenMode}>Click for Fullscreen</button>
+            <button onClick={getPurchaseHistory}>Click for Fullscreen</button>
             <div>
               <Chart
                 chartType="ScatterChart"
@@ -71,7 +82,7 @@ export default function Dashboard() {
                 legendToggle
               />
             </div>
-          </div>
+          </div> */}
 {/* conditional rendering */}
 
           <AddNewPurchaseLoggedIn isLoggedIn={true}/>

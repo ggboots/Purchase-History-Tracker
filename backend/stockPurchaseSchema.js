@@ -4,13 +4,13 @@ const stockPurchaseSchema = new mongoose.Schema(
 {
     ticker: {
       type: String,
-      // required: true,
+      required: true,
     },
     quantity: {
         type: Number,
         // required: true,
     },
-    amountAtPurchases: {
+    costAtPurchases: {
         type: Number,
         // required: true,
     },
@@ -18,9 +18,10 @@ const stockPurchaseSchema = new mongoose.Schema(
         type: String,
         // required: true,
     },
-    // username: {
-    //   type: String,
-    // },
+    username: {
+      type: String,
+    },
+    // id causes freeze
     // _id: {
     //   type: String,
     // }

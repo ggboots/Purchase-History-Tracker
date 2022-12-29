@@ -1,8 +1,7 @@
-import connectMongo from "../../backend/importConnectMongodb";
+import connectMongoDB from "../../backend/connectMongoDB";
 import loginSchema from "../../backend/loginSchema";
 
-// change to default
-connectMongo();
+connectMongoDB();
 
 export default async function handler(req,res){
     try {
