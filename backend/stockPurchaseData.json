@@ -1,14 +1,19 @@
-[
-    {
-        "ticker":"TSLA",
-        "quantity": "360",
-        "costAtPurchase": "12000",
-        "dateOfPurchases": "20-02-2020"
-    },
-    {
-        "ticker":"TSLA",
-        "quantity": "360",
-        "costAtPurchase": "12000",
-        "dateOfPurchases": "01-04-2020"
-    }
-]
+{
+    "ledger":
+    [
+        {
+            "id": 1,
+            "ticker":"TSLA",
+            "quantity": "360",
+            "costAtPurchase": "12000",
+            "dateOfPurchases": "20-02-2020"
+        },
+        {
+            "id":2,
+            "ticker":"TSLA",
+            "quantity": "360",
+            "costAtPurchase": "12000",
+            "dateOfPurchases": "01-04-2020"
+        }
+    ]
+}

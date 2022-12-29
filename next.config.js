@@ -6,7 +6,13 @@ const nextConfig = {
     MONGO_TICKER_PURCHASES_URI: process.env.MONGO_TICKER_PURCHASES_URI,
 
     TD_API_KEY: process.env.TD_API_KEY,
-  }
+  },
+  webpack5: true,
+  webpack: (config) => {
+    config.resolve.fallback = { fs: false , path: false};
+
+    return config;
+  },
 }
 
 module.exports = nextConfig
