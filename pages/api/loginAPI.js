@@ -22,6 +22,3 @@ export default async function handler(req,res){
 
     }
 }
-
-//cookies vs localstorage
-// https://www.youtube.com/watch?v=AwicscsvGLg&t=338s&ab_channel=freeCodeCamp.org

@@ -11,6 +11,10 @@ https://www.youtube.com/watch?v=d2yNsZd5PMs
 2 - Twelvedata API for stock information
 3 - Google Charts to display information/ Chart.js 
 
+
+Analyze Build Tool
++ ANALYZE=true npm run dev, to run analysis
+
 ### Mongo db
 https://mongoosejs.com/docs
 

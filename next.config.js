@@ -7,12 +7,17 @@ const nextConfig = {
 
     TD_API_KEY: process.env.TD_API_KEY,
   },
-  webpack5: true,
-  webpack: (config) => {
-    config.resolve.fallback = { fs: false , path: false};
+  // webpack5: true,
+  // webpack: (config) => {
+  //   config.resolve.fallback = { fs: false , path: false};
 
-    return config;
-  },
-}
+  //   return config;
+  // },
+};
 
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
+
+// module.exports = withBundleAnalyzer(nextConfig)
 module.exports = nextConfig
