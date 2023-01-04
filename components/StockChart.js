@@ -1,14 +1,11 @@
 import React from 'react';
 import { Chart } from "react-google-charts";
 
-import Head from "next/head"
-import Link from "next/link"
-
 import styles from "../styles/Dashboard.module.scss";
 
 
 export const data = [
-    ["Year", "Sales"],
+    ["Timeframe", "Sales"],
     ["2013", 1000],
     ["2014", 1170],
     ["2015", 660],

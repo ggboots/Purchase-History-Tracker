@@ -7,6 +7,7 @@ import Link from "next/link";
 
 import AddNewPurchaseLoggedIn from '../components/AddNewPurchaseLoggedIn'
 import StockChart from "../components/StockChart";
+import StockChange from "../components/StockChange";
 
 import styles from "../styles/Dashboard.module.scss";
 
@@ -41,7 +42,7 @@ export default function Dashboard() {
   return (
     <div>
       <Head>
-        <title>Stock Purchase Tracker</title>
+        <title>Purchase History Tracker</title>
         <meta
           name="description"
           content="Web App for Tracking Stock Purchases"
@@ -66,6 +67,7 @@ export default function Dashboard() {
             <h2>Stock Change &rarr;</h2>
           </div>
           <StockChart />
+          <StockChange />
           {/* <div id={styles.chart} className={styles.gridChart}>
             <h2 className={styles.cardChart}>Chart</h2>
             <button onClick={getPurchaseHistory}>Click for Fullscreen</button>

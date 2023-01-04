@@ -12,9 +12,6 @@ https://www.youtube.com/watch?v=d2yNsZd5PMs
 3 - Google Charts to display information/ Chart.js 
 
 
-Analyze Build Tool
-+ ANALYZE=true npm run dev, to run analysis
-
 ### Mongo db
 https://mongoosejs.com/docs
 
@@ -32,4 +29,6 @@ alternative (AlphaVenture)
 
 MongoDB
 
-
+Analyze Build Tool
++ ` ANALYZE=true npm run dev ` , to run analysis
++ next.config.js =  ` module.exports = withBundleAnalyzer(nextConfig) `

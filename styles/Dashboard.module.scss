@@ -25,7 +25,16 @@
 
 #stockChange {
   grid-area: stockChange;
+  // display: flex;
+  // flex-direction: row;
 }
+
+
+#stockChangePrompt {
+  display: flex;
+  flex-direction: row;
+}
+
 
 #chart {
   grid-area: chart;
