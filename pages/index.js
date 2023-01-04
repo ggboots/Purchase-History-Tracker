@@ -12,15 +12,11 @@ import StockChange from "../components/StockChange";
 import styles from "../styles/Dashboard.module.scss";
 
 
+
 export default function Dashboard() {
   // on default, useState will set as login, when components render only
   const [loginTitle, setLoginTitle] = useState("login");
   let loginUsername = data.username || 'login'
-    // take data from json OR if empty set as 
-
-    function fullScreenMode(){
-      // css module
-    }
 
     async function GetStaticProps(){
       const res = await fetch('http://localhost:300/api/')
@@ -38,7 +34,7 @@ export default function Dashboard() {
         }
       }
     
-
+// conditional rendering / if(loggedIn = true => return ())
   return (
     <div>
       <Head>
@@ -51,7 +47,7 @@ export default function Dashboard() {
       </Head>
 
       <h1 className={styles.title}>
-        <a>Stock Purchase App</a>
+        <a>Purchase History Tracker</a>
         <Link href="login" passHref id={styles.login} >
           {loginUsername}
         </Link>
@@ -68,25 +64,6 @@ export default function Dashboard() {
           </div>
           <StockChart />
           <StockChange />
-          {/* <div id={styles.chart} className={styles.gridChart}>
-            <h2 className={styles.cardChart}>Chart</h2>
-            <button onClick={getPurchaseHistory}>Click for Fullscreen</button>
-            <div>
-              <Chart
-                chartType="ScatterChart"
-                data={[
-                  ["StockPrice", "$TSLA"],
-                  [30, 42],
-                  [360, 360],
-                ]}
-                width="100%"
-                height="500px"
-                legendToggle
-              />
-            </div>
-          </div> */}
-{/* conditional rendering */}
-
           <AddNewPurchaseLoggedIn isLoggedIn={true}/>
 
           <div id={styles.chartController} className={styles.card}>

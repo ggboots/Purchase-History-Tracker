@@ -1,4 +1,4 @@
-## Stock Purchase Tracker App
+## Purchase History Tracker WebApp
 
 ```bash
 mui.com (Material UI) after finishing
@@ -11,6 +11,7 @@ https://www.youtube.com/watch?v=d2yNsZd5PMs
 2 - Twelvedata API for stock information
 3 - Google Charts to display information/ Chart.js 
 
+NextJS
 
 ### Mongo db
 https://mongoosejs.com/docs
