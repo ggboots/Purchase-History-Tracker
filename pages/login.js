@@ -11,7 +11,6 @@ function Login (){
 
   // function signOut(){
   //   jsonfile.writeFile('./backend/fromDatabase.json', '{}')
-
   // }
 
     return (
@@ -37,7 +36,7 @@ function Login (){
         <Link href="register" id={styles.login}>Register new user</Link>
       </div>
       </form>
-      <button onClick="api/hello.js">Sign Out existing</button>
+      {/* <button onClick={signOut}>Sign Out existing</button> */}
       </div>
   );
 

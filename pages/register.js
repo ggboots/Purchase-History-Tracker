@@ -13,7 +13,6 @@ export default class Register extends Component {
   }
   render(){
     return (
-      // <form onSubmit={this.handleSubmit}>
       <form action="api/registerAPI" method="post">
       <h1 className={styles.title}>Register User</h1>
       <div>

@@ -11,7 +11,7 @@ export default class login extends Component {
   render(){
     return (
        
-      <form action="api/stockPurchaseAPI" method="post">
+      <form action="api/purchaseAPI" method="post">
       <div>
         <Link href="../">Return Home</Link>
       </div>

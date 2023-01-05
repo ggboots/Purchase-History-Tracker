@@ -10,6 +10,10 @@ import StockChart from "../components/StockChart";
 import StockChange from "../components/StockChange";
 
 import styles from "../styles/Dashboard.module.scss";
+// MUI elements \/
+import Button from '@mui/material/Button';
+import { FormControl, MenuItem, InputLabel, Select  } from "@mui/material";
+
 
 
 
@@ -17,11 +21,6 @@ export default function Dashboard() {
   // on default, useState will set as login, when components render only
   const [loginTitle, setLoginTitle] = useState("login");
   let loginUsername = data.username || 'login'
-
-    async function GetStaticProps(){
-      const res = await fetch('http://localhost:300/api/')
-      console.log(res.json)
-    }
 
     const getPurchaseHistory = async () => {
         try {
@@ -56,15 +55,29 @@ export default function Dashboard() {
       <div className={styles.container}>
         <main id={styles.main}>
           <div id={styles.banner} className={styles.grid}>
-            <h2 className={styles.card}>Banner stock information</h2>
+            <h2 className={styles.card}>
+              Banner stock information 
+            </h2>
           </div>
 
           <div id={styles.stockChange} className={styles.card}>
-            <h2>Stock Change &rarr;</h2>
+            {/* <h2>Stock Change &rarr;</h2> */}
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-select-label">Change Purchase Type</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                label="Age"
+              >
+              <MenuItem value={10}>TSLA</MenuItem>
+              <MenuItem value={20}>AAPL</MenuItem>
+              <MenuItem value={30}>Purchases</MenuItem>
+            </Select>
+          </FormControl>
           </div>
           <StockChart />
-          <StockChange />
-          <AddNewPurchaseLoggedIn isLoggedIn={true}/>
+          {/* <StockChange /> */}
+          <AddNewPurchaseLoggedIn/>
 
           <div id={styles.chartController} className={styles.card}>
             <h2>Controller</h2>

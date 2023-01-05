@@ -6,17 +6,19 @@ import styles from "../styles/Dashboard.module.scss";
 
 export const data = [
     ["Timeframe", "Sales"],
-    ["2013", 1000],
-    ["2014", 1170],
-    ["2015", 660],
-    ["2016", 1030],
-    ["2010", 1030],
+    ["20-02-2020", 1000],
+    ["21-02-2020", 1170],
+    ["22-02-2020", 660],
+    ["23-02-2020", 1230],
+    ["24-02-2020", 1830],
+    ["25-02-2020", 730],
+    ["26-02-2020", 830],
   ];
   
   export const options = {
     title: "tesla",
     // title: "Company Performance",
-    hAxis: { title: "Year", titleTextStyle: { color: "#333" } },
+    hAxis: { title: "Weekly", titleTextStyle: { color: "#333" } },
     vAxis: { title: "price", minValue: 0 },
     chartArea: { width: "70%", height: "70%" },
   };
