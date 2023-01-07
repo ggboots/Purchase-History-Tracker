@@ -1,9 +1,7 @@
 ## Purchase History Tracker WebApp
-* in progress
+* still in progress
 
-<img src="https://github.com/ggboots/StockPurchase_WebApp/blob/main/public/nextjsIcon.png" alt="nextjs" style="width:200px;"/>
-<img src="https://github.com/ggboots/StockPurchase_WebApp/blob/main/public/mongoDBicon.webp" alt="mongodb" style="width:200px;"/>
-<img src="https://github.com/ggboots/Purchase-History-Tracker/blob/main/public/mongooseICON.png" alt="mongoose" style="width:200px;"/>
+<img src="https://github.com/ggboots/StockPurchase_WebApp/blob/main/public/nextjsIcon.png" alt="nextjs" style="width:180px;"/><img src="https://github.com/ggboots/StockPurchase_WebApp/blob/main/public/mongoDBicon.webp" alt="mongodb" style="width:200px;"/><img src="https://github.com/ggboots/Purchase-History-Tracker/blob/main/public/mongooseICON.png" alt="mongoose" style="width:200px;"/>
 
 ***
 ### NextJS
